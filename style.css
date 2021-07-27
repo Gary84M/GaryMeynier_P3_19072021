@@ -1,9 +1,13 @@
 body {
-  background-color: #fff;
+  font-family: Roboto;
 }
 
-.container {
-  display: block;
+.header__logo, .card__title, .footer__logo {
+  font-family: shrikhand;
+}
+
+.header__logo {
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
