@@ -1,0 +1,18 @@
+.header__logo{
+    box-shadow: 0 5px 0.5rem 0 rgba(0 0 0 /0.3);
+    margin: 0;
+    padding: 1rem 0 1rem 0;   
+}
+.location{
+    display: flex;
+    justify-content: center;
+    background-color: #c5c5c54b;
+    width: 100%;
+    padding: 1rem  0 1rem 0;
+}
+.hero{
+    text-align: center;
+    justify-content: center;
+    background-color: $colour-background;
+    
+}

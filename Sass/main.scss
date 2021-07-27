@@ -1,2 +1,8 @@
-@import "./base/fonts";
+@import "./utils/variables.scss";
+@import "./utils/mixins";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./layout/allPages";
+@import "./layout/homePage";
 @import "./layout/header";
