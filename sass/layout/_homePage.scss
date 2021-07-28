@@ -16,3 +16,9 @@
     background-color: $colour-background;
     
 }
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $colour-background;
+}

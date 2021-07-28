@@ -1,12 +1,58 @@
-/*EXPLAINER*/
+/*-------------------------------EXPLAINER------------------------------*/
 
 .explainer__step{
     background-color: $colour-background;
-    padding: 2rem 1rem;
+    padding: 1rem;
     margin: 1rem;
-    box-shadow: 0 5px 5px rgba(0 0 0 /0.3);
-    border-radius: 3rem;
-    
+    box-shadow: 0 5px 5px rgba(0 0 0 /0.2);
+    border-radius: 2.5rem;
+
     
 }
+/*---------------------------------Bullets------------------------------*/
+li {
+    counter-increment: li;
 
+        &::before {
+
+        content: counter(li);
+        padding: .4rem .6rem .4rem .6rem;
+        border-radius: 100%;
+        background: $colour-primary;
+        color: #fff;
+        margin-left: -2rem;
+    }
+}
+.explainer__steps .fas{
+    padding: 1rem;
+}
+/*---------------------------------RESTO CARDS------------------------------*/
+
+.restaurants__card{
+    align-self: center;
+    border-radius: 1rem;
+    background-color: sandybrown;
+    width: 90%;
+    margin-bottom: 1rem;
+
+}
+
+.card__img {
+    width: 100%;
+    position: relative;
+}
+.card__img img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    
+}
+.card__new{
+    position: absolute;
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: .5rem;
+    border-radius: .25rem;
+    top: 1rem;
+    right: 1rem;
+}
