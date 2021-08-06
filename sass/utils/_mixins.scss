@@ -1,3 +1,6 @@
+@mixin dual-colour {
+    background-image: linear-gradient(0deg, $colour-primary, $colour-secondary);
+}
 @mixin btn {
     border: 0;
     padding: 1rem;
@@ -7,6 +10,6 @@
     color: #fff;
     transition-duration: 25ms;
     cursor: pointer;
-    background-image: linear-gradient(0deg, $colour-primary, $colour-secondary);
+    background-image: $colour-dual;
     box-shadow: 0.3rem 0.3rem 5px rgba(0 0 0 / 0.3);
 }

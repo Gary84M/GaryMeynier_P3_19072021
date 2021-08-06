@@ -1,0 +1,23 @@
+.footer__all-pages{
+    background-color: $colour-footer;
+    text-decoration: none;
+    color: #fff;
+    min-height: 100%;
+    a{
+        text-decoration: none;
+        color: white;
+        padding: 1rem 0 0 0;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+    }
+}
+.footer__icon{
+    margin-right: 1rem;
+    
+}
+.fa-handshake{
+    transform: rotate(-40deg) scale(0.8);
+    margin-right: 0.55rem;
+}

@@ -1,3 +1,32 @@
 .hero__btn{
     @include btn;
 }
+.menu__btn{
+    position: relative;
+    cursor: pointer;
+    .card__like  {
+        position: absolute;
+        
+    
+    }
+}
+.heart--outline {
+    opacity: 1;
+    &:hover{
+        display: hidden;
+        color: transparent;
+    }
+}
+/*.menu__btn:hover .heart--outline {
+    opacity: 0;
+}*/
+.heart--bg {
+    opacity: 0;
+    background-image: $colour-dual;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    &:hover {
+        display: block;
+        opacity: 1;
+    }
+}
