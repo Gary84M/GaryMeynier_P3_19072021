@@ -16,6 +16,10 @@
         display: hidden;
         color: transparent;
     }
+    &:visited{
+        display: hidden;
+        color: transparent;
+    }
 }
 /*.menu__btn:hover .heart--outline {
     opacity: 0;
@@ -25,7 +29,11 @@
     background-image: $colour-dual;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-    &:hover {
+    &:hover{
+        display: block;
+        opacity: 1;
+    }
+    &:visited{
         display: block;
         opacity: 1;
     }
