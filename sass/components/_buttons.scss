@@ -1,7 +1,7 @@
 .hero__btn{
     @include btn;
 }
-.menu__btn{
+.card__btn{
     position: relative;
     cursor: pointer;
     .card__like  {
@@ -16,7 +16,7 @@
         display: hidden;
         color: transparent;
     }
-    &:visited{
+    &:active{
         display: hidden;
         color: transparent;
     }
@@ -33,7 +33,7 @@
         display: block;
         opacity: 1;
     }
-    &:visited{
+    &:active{
         display: block;
         opacity: 1;
     }

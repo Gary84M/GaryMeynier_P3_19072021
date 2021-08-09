@@ -2,7 +2,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.header__logo, .footer__logo {
+.header__logo, .footer__logo, .menu__title {
   font-family: shrikhand, sans-serif;
 }
 
@@ -28,11 +28,11 @@ body {
   box-shadow: 0.3rem 0.3rem 5px rgba(0, 0, 0, 0.3);
 }
 
-.menu__btn {
+.card__btn {
   position: relative;
   cursor: pointer;
 }
-.menu__btn .card__like {
+.card__btn .card__like {
   position: absolute;
 }
 
@@ -43,7 +43,7 @@ body {
   display: hidden;
   color: transparent;
 }
-.heart--outline:visited {
+.heart--outline:active {
   display: hidden;
   color: transparent;
 }
@@ -61,7 +61,7 @@ body {
   display: block;
   opacity: 1;
 }
-.heart--bg:visited {
+.heart--bg:active {
   display: block;
   opacity: 1;
 }
@@ -199,6 +199,85 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: rgba(241, 241, 241, 0.5);
+}
+
+/**---ARROW menu---**/
+.header--arrow {
+  position: relative;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  color: black;
+  top: 30px;
+  left: 10px;
+}
+
+.bg__img {
+  width: 100%;
+}
+.bg__img img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu__container {
+  background-color: rgba(241, 241, 241, 0.5);
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -4rem;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  padding-bottom: 3rem;
+}
+
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+}
+
+.submenu__title {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/*--menu cards--*/
+.menu__card {
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+  line-height: 0.5rem;
+}
+
+.card__item {
+  font-weight: 300;
+}
+
+.card__price {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  padding: 0 1rem 1rem 0;
+}
+
+.order__btn {
+  border: 0;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 5rem;
+  color: #fff;
+  transition-duration: 25ms;
+  cursor: pointer;
+  background-image: linear-gradient(300deg, #9356DC, #FF79DA);
+  box-shadow: 0.3rem 0.3rem 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem 1rem 2rem;
+  align-items: center;
 }
 
 .header__logo {
