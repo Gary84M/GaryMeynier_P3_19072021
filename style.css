@@ -22,53 +22,63 @@ body {
   font-size: 1.1rem;
   border-radius: 5rem;
   color: #fff;
-  transition-duration: 25ms;
+  transform: scale;
+  transition-duration: 50ms;
   cursor: pointer;
   background-image: linear-gradient(300deg, #9356DC, #FF79DA);
   box-shadow: 0.3rem 0.3rem 5px rgba(0, 0, 0, 0.3);
 }
+.hero__btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.hero__btn:hover {
+  transform: scale(1.13);
+  background-image: linear-gradient(120deg, #9356DC, #FF79DA);
+}
 
 .card__btn {
+  margin-top: 1rem;
   position: relative;
   cursor: pointer;
+  /*.menu__btn:hover .heart--outline {
+      opacity: 0;
+  }*/
 }
 .card__btn .card__like {
   position: absolute;
 }
-
-.heart--outline {
+.card__btn:hover .heart--outline {
+  display: hidden;
+  color: transparent;
+}
+.card__btn:hover .heart--bg {
+  display: block;
+  transition: opacity 1s;
   opacity: 1;
 }
-.heart--outline:hover {
+.card__btn .heart--outline {
+  opacity: 1;
+}
+.card__btn .heart--outline:active {
   display: hidden;
   color: transparent;
 }
-.heart--outline:active {
-  display: hidden;
-  color: transparent;
-}
-
-/*.menu__btn:hover .heart--outline {
-    opacity: 0;
-}*/
-.heart--bg {
+.card__btn .heart--bg {
   opacity: 0;
   background-image: linear-gradient(300deg, #9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.heart--bg:hover {
-  display: block;
-  opacity: 1;
-}
-.heart--bg:active {
+.card__btn .heart--bg:active {
   display: block;
   opacity: 1;
 }
 
 /*-------------------------------EXPLAINER------------------------------*/
 .explainer__step {
-  background-color: rgba(241, 241, 241, 0.5);
+  background-color: #f1f1f1;
   padding: 1rem;
   margin: 1rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -85,8 +95,14 @@ ol {
   list-style: none;
 }
 .explainer__steps li::before {
+  display: inline-block;
   content: counter(li);
-  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  /*padding: .5rem .7rem .5rem .7rem;*/
+  line-height: 1rem;
+  padding: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  align-items: center;
   border-radius: 100%;
   background: #9356DC;
   color: #fff;
@@ -98,6 +114,10 @@ ol {
 }
 
 /*---------------------------------RESTO CARDS------------------------------*/
+.card__title .menu__tilte {
+  margin: 0;
+}
+
 .restaurants__card {
   align-self: center;
   border-radius: 1rem;
@@ -136,6 +156,26 @@ ol {
   display: flex;
   justify-content: space-between;
   padding: 0 3rem 1rem 1rem;
+}
+
+/*---------------------------------Check animation------------------------------*/
+.menu__card {
+  cursor: pointer;
+}
+.menu__card .card__check {
+  align-self: flex-end;
+  align-self: center;
+  transform: scale(1.8);
+  background-color: #99E2D0;
+  width: 1rem;
+  color: #fff;
+  /*display: none;*/
+  visibility: hidden;
+  height: 100%;
+  margin: 0;
+}
+.menu__card .card__check:hover {
+  display: block;
 }
 
 .footer__all-pages {
@@ -190,15 +230,15 @@ body {
 .hero {
   text-align: center;
   justify-content: center;
-  background-color: rgba(241, 241, 241, 0.5);
-  padding-bottom: 3rem;
+  background-color: #f1f1f1;
+  padding: 1rem 0 3rem 0;
 }
 
 .restaurants {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(241, 241, 241, 0.5);
+  background-color: #f1f1f1;
 }
 
 /**---ARROW menu---**/
@@ -222,7 +262,7 @@ body {
 }
 
 .menu__container {
-  background-color: rgba(241, 241, 241, 0.5);
+  background-color: #f1f1f1;
   border-radius: 2rem 2rem 0 0;
   margin-top: -4rem;
   position: relative;
@@ -272,12 +312,21 @@ body {
   font-size: 1.1rem;
   border-radius: 5rem;
   color: #fff;
-  transition-duration: 25ms;
+  transform: scale;
+  transition-duration: 50ms;
   cursor: pointer;
   background-image: linear-gradient(300deg, #9356DC, #FF79DA);
   box-shadow: 0.3rem 0.3rem 5px rgba(0, 0, 0, 0.3);
   padding: 1rem 2rem 1rem 2rem;
   align-items: center;
+}
+.order__btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.order__btn:hover {
+  transform: scale(1.13);
+  background-image: linear-gradient(120deg, #9356DC, #FF79DA);
 }
 
 .header__logo {

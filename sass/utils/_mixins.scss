@@ -1,5 +1,12 @@
-@mixin dual-colour {
-    background-image: linear-gradient(0deg, $colour-primary, $colour-secondary);
+@mixin dual-colour-start{
+    background-image: linear-gradient(300deg, $colour-primary, $colour-secondary);
+}
+@mixin dual-colour-end{
+    background-image: linear-gradient(120deg, $colour-primary, $colour-secondary);
+}
+
+@mixin box-shadow($colour:$colour-shadow, $size: $shadow-size){
+    box-shadow: $size $colour-shadow;
 }
 @mixin btn {
     border: 0;
@@ -8,8 +15,19 @@
     font-size: 1.1rem;
     border-radius: 5rem;
     color: #fff;
-    transition-duration: 25ms;
+    transform: scale;
+    transition-duration: 50ms;
     cursor: pointer;
-    background-image: $colour-dual;
-    box-shadow: 0.3rem 0.3rem 5px rgba(0 0 0 / 0.3);
+    background-image: $colour-dual-start;
+    @include box-shadow;
+
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    &:hover{
+        transform: scale(1.13);
+        background-image: $colour-dual-end;
+
+    }
 }

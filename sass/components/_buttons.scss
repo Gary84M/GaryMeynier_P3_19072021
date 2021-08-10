@@ -2,6 +2,7 @@
     @include btn;
 }
 .card__btn{
+    margin-top: 1rem;
     position: relative;
     cursor: pointer;
     .card__like  {
@@ -9,32 +10,42 @@
         
     
     }
-}
-.heart--outline {
-    opacity: 1;
-    &:hover{
-        display: hidden;
-        color: transparent;
+
+    &:hover {
+        & .heart--outline{
+            display: hidden;
+            color: transparent;
+        }
     }
-    &:active{
-        display: hidden;
-        color: transparent;
+    &:hover {
+        & .heart--bg{
+            display: block;
+            transition: opacity 1s;
+            opacity: 1;
+        }
     }
-}
-/*.menu__btn:hover .heart--outline {
-    opacity: 0;
-}*/
-.heart--bg {
-    opacity: 0;
-    background-image: $colour-dual;
-    -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    &:hover{
-        display: block;
+
+    .heart--outline {
         opacity: 1;
+        &:active{
+            display: hidden;
+            color: transparent;
+        }
     }
-    &:active{
-        display: block;
-        opacity: 1;
+    
+    
+    /*.menu__btn:hover .heart--outline {
+        opacity: 0;
+    }*/
+    .heart--bg {
+        opacity: 0;
+        background-image: $colour-dual-start;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &:active{
+            display: block;
+            opacity: 1;
+        }
     }
 }
