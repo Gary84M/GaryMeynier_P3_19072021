@@ -6,7 +6,7 @@
 }
 
 @mixin box-shadow($colour:$colour-shadow, $size: $shadow-size){
-    box-shadow: $size $colour-shadow;
+    box-shadow: $colour-shadow $size ;
 }
 @mixin btn {
     border: 0;
@@ -15,8 +15,8 @@
     font-size: 1.1rem;
     border-radius: 5rem;
     color: #fff;
-    transform: scale;
-    transition-duration: 50ms;
+    transition: scale 50ms;
+    
     cursor: pointer;
     background-image: $colour-dual-start;
     @include box-shadow;
@@ -27,7 +27,16 @@
     }
     &:hover{
         transform: scale(1.13);
-        background-image: $colour-dual-end;
+        background-image: $colour-dual-end(lighten($colour-primary,70%)lighten($colour-secondary,70%));
+        @include box-shadow($colour: $colour-tertiary, $size: 2rem 2rem 25px);
+        
+        
+        
+
 
     }
 }
+/*@mixin heading-shadow($colour:$colour-primary, $size: $heading-shadow-size){
+      text-shadow: $size $size darken($colour, 10%);
+}
+*/

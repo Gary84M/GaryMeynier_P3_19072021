@@ -11,7 +11,6 @@
 }
 .bg__img{
     width: 100%;
-    
     img{
         object-fit: cover;
         width: 100%;   
@@ -26,43 +25,4 @@
     opacity: 1;
     padding-bottom: 3rem;
     
-}
-.menu__header{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 2rem;
-    
-}
-
-.submenu__title{
-    text-transform: uppercase;
-    font-weight: 300;
-}
-/*--menu cards--*/
-.menu__card{
-    background-color: #fff;
-    border-radius: 1rem;
-    margin: 1rem 0;
-    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.3rem;
-    line-height: 0.5rem;
-}
-
-
-.card__item{
-    
-    font-weight: 300;
-}
-.card__price{
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
-    padding: 0 1rem 1rem 0;
-}
-.order__btn{
-    @include btn;
-    padding: 1rem 2rem 1rem 2rem;
-    align-items: center;
 }

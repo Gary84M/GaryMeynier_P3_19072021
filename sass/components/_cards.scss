@@ -16,9 +16,6 @@ ol{
 .explainer__steps li {
     counter-increment: li;
     list-style: none;
-    
-    
-
         &::before {
         display: inline-block;
         content: counter(li);
@@ -28,9 +25,6 @@ ol{
         width: 1rem;
         height: 1rem;
         align-items: center;
-        
-        
-
         border-radius: 100%;
         background: $colour-primary;
         color: #fff;
@@ -46,7 +40,6 @@ ol{
 }
 
 .restaurants__card{
-    align-self: center;
     border-radius: 1rem;
     width: 100%;
     margin-bottom: 1rem;
@@ -56,22 +49,23 @@ ol{
         color: black;
         
     }
-
 }
-
-
 .card__img {
     width: 100%;
     position: relative;
-    
-}
-.card__img img{
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem 1rem 0 0;
+    & img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
 }
 
+.card__footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem 1rem 1rem;
+}
 .card__new{
     position: absolute;
     background-color: #99e2d0;
@@ -81,34 +75,56 @@ ol{
     top: 1rem;
     right: 1rem;
 }
-.card__footer{
-    
+/*---------------------------------menu cards---------------------------------*/
+.menu__card{
     display: flex;
     justify-content: space-between;
-    padding: 0 3rem 1rem 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 0 0.3rem;
+    line-height: 0.5rem;
+    @include box-shadow;
 }
-
+.menu__header{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2rem;
+        
+    }
+.submenu__title{
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+.card__item{
+        
+        font-weight: 300;
+    }
+.card__price{
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+        padding: 0 1rem 1rem 0;
+    }
 /*---------------------------------Check animation------------------------------*/
 .menu__card{
     cursor: pointer;
+    
 
 
     .card__check{
-        align-self: flex-end;
+        padding: 13px 16px 13px 16px;
+        margin-right: .9rem;
+        border-radius: 0 .6rem .6rem 0;
         align-self: center;
+        align-items: flex-end;
+        
+        
+        
         transform: scale(1.8);
         background-color: $colour-tertiary;
-        width: 1rem;
-        
         color: #fff;
+
         /*display: none;*/
-        visibility: hidden;
-
-        height: 100%;
-        margin: 0;
-        &:hover {
-            display: block;
-        }
-
     }
 }

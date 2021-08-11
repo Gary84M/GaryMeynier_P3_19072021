@@ -1,16 +1,21 @@
 .hero__btn{
     @include btn;
 }
+.order__btn{
+    @include btn;
+    padding: 1rem 2rem 1rem 2rem;
+    display: block;
+    align-items: right;
+    
+}
+
 .card__btn{
     margin-top: 1rem;
     position: relative;
     cursor: pointer;
     .card__like  {
         position: absolute;
-        
-    
     }
-
     &:hover {
         & .heart--outline{
             display: hidden;
@@ -24,7 +29,6 @@
             opacity: 1;
         }
     }
-
     .heart--outline {
         opacity: 1;
         &:active{
@@ -32,11 +36,6 @@
             color: transparent;
         }
     }
-    
-    
-    /*.menu__btn:hover .heart--outline {
-        opacity: 0;
-    }*/
     .heart--bg {
         opacity: 0;
         background-image: $colour-dual-start;
