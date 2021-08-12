@@ -109,22 +109,44 @@ ol{
 /*---------------------------------Check animation------------------------------*/
 .menu__card{
     cursor: pointer;
+    position: relative;
+    
+    .menu__price{
+        transform: scale(1);
+        transition: transform 330ms ease-in-out;
+
+    }
     
 
 
     .card__check{
-        padding: 13px 16px 13px 16px;
-        margin-right: .9rem;
-        border-radius: 0 .6rem .6rem 0;
-        align-self: center;
-        align-items: flex-end;
+        position: absolute;
+        right: 0;
+
+        display: flex;
+        justify-content:center;
+        align-items: center;
         
+        height: 10%;
+        width: 4rem;
+        border-radius: 0 1rem 1rem 0;
         
+
         
-        transform: scale(1.8);
+        font-size: 1.8rem;
+        
         background-color: $colour-tertiary;
         color: #fff;
 
         /*display: none;*/
+        
+        transition: transform 330ms ease-in-out;
+        
+        
+        
+    }
+    &:hover +.card__price{
+        transform: scale(1);
+        transform: translate(-4rem, 0);
     }
 }

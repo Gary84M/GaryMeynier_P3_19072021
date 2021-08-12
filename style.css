@@ -28,6 +28,7 @@ body {
   border-radius: 5rem;
   color: #fff;
   transition: scale 50ms;
+  transform: scale(1);
   cursor: pointer;
   background-image: linear-gradient(300deg, #9356DC, #FF79DA);
   box-shadow: rgba(0, 0, 0, 0.3) 0.3rem 0.3rem 5px;
@@ -40,6 +41,7 @@ body {
   transform: scale(1.13);
   background-image: linear-gradient(120deg, #9356DC, #FF79DA) white white;
   box-shadow: rgba(0, 0, 0, 0.3) 2rem 2rem 25px;
+  background-image: linear-gradient(120deg, white white, #FF79DA);
 }
 
 .order__btn {
@@ -50,6 +52,7 @@ body {
   border-radius: 5rem;
   color: #fff;
   transition: scale 50ms;
+  transform: scale(1);
   cursor: pointer;
   background-image: linear-gradient(300deg, #9356DC, #FF79DA);
   box-shadow: rgba(0, 0, 0, 0.3) 0.3rem 0.3rem 5px;
@@ -65,6 +68,7 @@ body {
   transform: scale(1.13);
   background-image: linear-gradient(120deg, #9356DC, #FF79DA) white white;
   box-shadow: rgba(0, 0, 0, 0.3) 2rem 2rem 25px;
+  background-image: linear-gradient(120deg, white white, #FF79DA);
 }
 
 .card__btn {
@@ -220,17 +224,30 @@ ol {
 /*---------------------------------Check animation------------------------------*/
 .menu__card {
   cursor: pointer;
+  position: relative;
+}
+.menu__card .menu__price {
+  transform: scale(1);
+  transition: transform 330ms ease-in-out;
 }
 .menu__card .card__check {
-  padding: 13px 16px 13px 16px;
-  margin-right: 0.9rem;
-  border-radius: 0 0.6rem 0.6rem 0;
-  align-self: center;
-  align-items: flex-end;
-  transform: scale(1.8);
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 4rem;
+  border-radius: 0 1rem 1rem 0;
+  font-size: 1.8rem;
   background-color: #99E2D0;
   color: #fff;
   /*display: none;*/
+  transition: transform 330ms ease-in-out;
+}
+.menu__card:hover + .card__price {
+  transform: scale(1);
+  transform: translate(-4rem, 0);
 }
 
 .footer__all-pages {

@@ -1,7 +1,7 @@
 @mixin dual-colour-start{
     background-image: linear-gradient(300deg, $colour-primary, $colour-secondary);
 }
-@mixin dual-colour-end{
+@mixin dual-colour-end($colour-primary: $colour-primary, $colour-secondary: $colour-secondary){
     background-image: linear-gradient(120deg, $colour-primary, $colour-secondary);
 }
 
@@ -16,7 +16,7 @@
     border-radius: 5rem;
     color: #fff;
     transition: scale 50ms;
-    
+    transform: scale(1);
     cursor: pointer;
     background-image: $colour-dual-start;
     @include box-shadow;
@@ -27,9 +27,9 @@
     }
     &:hover{
         transform: scale(1.13);
-        background-image: $colour-dual-end(lighten($colour-primary,70%)lighten($colour-secondary,70%));
+        background-image: $colour-dual-end (lighten($colour-primary,70%) lighten($colour-secondary,70%));
         @include box-shadow($colour: $colour-tertiary, $size: 2rem 2rem 25px);
-        
+        @include dual-colour-end (lighten($colour-primary,70%) lighten($colour-secondary,70%));
         
         
 
