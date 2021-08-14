@@ -1,11 +1,24 @@
 .hero__btn{
     @include btn;
+    &:hover{
+        transform: scale(1.13);
+        @include box-shadow($colour: $colour-tertiary, $size: 2rem 2rem 25px);
+        @include linear-lighten;
+    }
 }
 .order__btn{
     @include btn;
     padding: 1rem 2rem 1rem 2rem;
-    display: block;
-    align-items: right;
+    
+    &:hover{
+        transform: scale(1.13);
+        //background-image: $colour-dual-end;
+        @include box-shadow ($size: 2rem 2rem 25px);
+        @include linear-lighten;
+        
+
+
+    }
     
 }
 

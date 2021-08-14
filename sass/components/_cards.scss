@@ -127,26 +127,30 @@ ol{
         justify-content:center;
         align-items: center;
         
-        height: 10%;
+        height: 100%;
         width: 4rem;
         border-radius: 0 1rem 1rem 0;
-        
-
         
         font-size: 1.8rem;
         
         background-color: $colour-tertiary;
         color: #fff;
 
-        /*display: none;*/
+        display: none;
         
-        transition: transform 330ms ease-in-out;
-        
-        
+        transition: 2s linear;
         
     }
-    &:hover +.card__price{
-        transform: scale(1);
+
+    &:hover .card__price{
+        
         transform: translate(-4rem, 0);
+
+    }
+    &:hover .card__check{
+        display: block;
+        display: flex;
+        justify-content:center;
+        align-items: center;
     }
 }

@@ -21,22 +21,13 @@
     background-image: $colour-dual-start;
     @include box-shadow;
 
+
     a{
         text-decoration: none;
         color: #fff;
     }
-    &:hover{
-        transform: scale(1.13);
-        background-image: $colour-dual-end (lighten($colour-primary,70%) lighten($colour-secondary,70%));
-        @include box-shadow($colour: $colour-tertiary, $size: 2rem 2rem 25px);
-        @include dual-colour-end (lighten($colour-primary,70%) lighten($colour-secondary,70%));
-        
-        
-
-
-    }
 }
-/*@mixin heading-shadow($colour:$colour-primary, $size: $heading-shadow-size){
-      text-shadow: $size $size darken($colour, 10%);
+    
+@mixin linear-lighten{
+    background: linear-gradient(120deg, lighten($colour-primary, 3%), lighten($colour-secondary, 3%));
 }
-*/
