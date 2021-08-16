@@ -1,22 +1,29 @@
 /*-------------------------------EXPLAINER------------------------------*/
 
-.explainer__step{
+.explainer__step {
     background-color: $colour-background;
     padding: 1rem;
     margin: 1rem;
     box-shadow: 0 5px 10px rgba(0 0 0 /0.2);
     border-radius: 1.5rem;
 
-    
+    &:hover {
+        background-color: lighten($colour-primary, 35%);
+    }
+
+
 }
+
 /*---------------------------------Bullets------------------------------*/
-ol{
+ol {
     padding-left: 0;
 }
+
 .explainer__steps li {
     counter-increment: li;
     list-style: none;
-        &::before {
+
+    &::before {
         display: inline-block;
         content: counter(li);
         /*padding: .5rem .7rem .5rem .7rem;*/
@@ -31,29 +38,42 @@ ol{
         margin-left: -2rem;
     }
 }
-.explainer__steps .fas{
+
+.explainer__steps .fas {
     padding: 1rem;
 }
+
 /*---------------------------------RESTO CARDS------------------------------*/
-.card__title .menu__tilte{
+
+.menu__header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+
+}
+
+.card__title .menu__tilte {
     margin: 0;
 }
 
-.restaurants__card{
+.restaurants__card {
     border-radius: 1rem;
     width: 100%;
     margin-bottom: 1rem;
     background-color: #fff;
+
     a {
         text-decoration: none;
         color: black;
-        
+
     }
 }
+
 .card__img {
     width: 100%;
     position: relative;
-    & img{
+
+    & img {
         object-fit: contain;
         width: 100%;
         height: 100%;
@@ -61,12 +81,13 @@ ol{
     }
 }
 
-.card__footer{
+.card__footer {
     display: flex;
     justify-content: space-between;
     padding: 0 3rem 1rem 1rem;
 }
-.card__new{
+
+.card__new {
     position: absolute;
     background-color: #99e2d0;
     color: #1b6150;
@@ -75,82 +96,90 @@ ol{
     top: 1rem;
     right: 1rem;
 }
+
 /*---------------------------------menu cards---------------------------------*/
-.menu__card{
+
+.submenu__title {
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: .5rem;
+
+    &::after {
+        content: "";
+        width: 3rem;
+        height: .2rem;
+        position: absolute;
+        background-color: $colour-tertiary;
+        bottom: 0;
+        left: 0;
+
+    }
+
+}
+
+.card__item {
+
+    font-weight: 300;
+}
+
+.card__price {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding: 0 1rem 1rem 0;
+}
+
+/*---------------------------------Check animation------------------------------*/
+.menu__card {
+    text-overflow: ellipsis;
+    max-width: 30rem;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     background-color: #fff;
     border-radius: 1rem;
     margin: 1rem 0;
-    padding: 0 0.3rem;
+    padding: 0 0 0 0.5rem;
     line-height: 0.5rem;
     @include box-shadow;
-}
-.menu__header{
+
+    .menu__card-header {
+        flex-grow: 10;
+    }
+
+
+
+    .card__check {
         display: flex;
-        justify-content: space-between;
-        padding-right: 2rem;
-        
-    }
-.submenu__title{
-        text-transform: uppercase;
-        font-weight: 300;
-    }
-.card__item{
-        
-        font-weight: 300;
-    }
-.card__price{
-        display: flex;
-        justify-content: flex-end;
-        align-self: flex-end;
-        padding: 0 1rem 1rem 0;
-    }
-/*---------------------------------Check animation------------------------------*/
-.menu__card{
-    cursor: pointer;
-    position: relative;
-    
-    .menu__price{
-        transform: scale(1);
-        transition: transform 330ms ease-in-out;
-
-    }
-    
-
-
-    .card__check{
-        position: absolute;
-        right: 0;
-
-        display: flex;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
-        
-        height: 100%;
-        width: 4rem;
+        width: 0;
         border-radius: 0 1rem 1rem 0;
-        
         font-size: 1.8rem;
-        
+        transition: width 1s;
+
         background-color: $colour-tertiary;
         color: #fff;
 
-        display: none;
-        
-        transition: 2s linear;
-        
     }
 
-    &:hover .card__price{
-        
-        transform: translate(-4rem, 0);
 
-    }
-    &:hover .card__check{
-        display: block;
+    &:hover .card__check {
+        width: 4rem;
         display: flex;
-        justify-content:center;
-        align-items: center;
+
+    }
+
+    .fa-check-circle {
+        transition-delay: .5s;
+        transition: transform 1s ease-in-out;
+    }
+
+    &:hover .fa-check-circle {
+        transform: rotate(1turn);
     }
 }
