@@ -54,6 +54,7 @@ ol {
 
 .card__title .menu__tilte {
     margin: 0;
+    
 }
 
 .restaurants__card {
@@ -119,7 +120,8 @@ ol {
 }
 
 .card__item {
-
+    
+    text-overflow: ellipsis;
     font-weight: 300;
 }
 
@@ -133,11 +135,11 @@ ol {
 /*---------------------------------Check animation------------------------------*/
 .menu__card {
     text-overflow: ellipsis;
-    max-width: 30rem;
+    white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
     background-color: #fff;
@@ -155,6 +157,7 @@ ol {
 
     .card__check {
         display: flex;
+        
         justify-content: center;
         align-items: center;
         width: 0;

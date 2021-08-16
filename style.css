@@ -38,6 +38,10 @@ body {
   background: linear-gradient(120deg, #a16be0, #ff93e1);
 }
 
+.centre-button {
+  text-align: center;
+}
+
 .order__btn {
   border: 0;
   padding: 1rem;
@@ -206,6 +210,7 @@ ol {
 }
 
 .card__item {
+  text-overflow: ellipsis;
   font-weight: 300;
 }
 
@@ -219,11 +224,11 @@ ol {
 /*---------------------------------Check animation------------------------------*/
 .menu__card {
   text-overflow: ellipsis;
-  max-width: 30rem;
+  white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: stretch;
   background-color: #fff;
@@ -259,6 +264,58 @@ ol {
   transform: rotate(1turn);
 }
 
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  align-self: center;
+}
+
+.spinner div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spinnerOne 1.2s linear infinite;
+}
+
+.spinner div:nth-child(2) {
+  border: 8px solid transparent;
+  border-bottom-color: #FF79DA;
+  animation: spinnerTwo 1.2s linear infinite;
+}
+
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+@keyframes spinnerTwo {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
 .footer__all-pages {
   background-color: #353535;
   text-decoration: none;
