@@ -35,7 +35,7 @@
     }
     &:hover {
         & .heart--outline{
-            display: hidden;
+            display: none;
             color: transparent;
         }
     }
@@ -49,14 +49,14 @@
     .heart--outline {
         opacity: 1;
         &:active{
-            display: hidden;
+            display: none;
             color: transparent;
         }
     }
     .heart--bg {
         opacity: 0;
         background-image: $colour-dual-start;
-        background-clip: text;
+        background-clip: border-box;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         &:active{
