@@ -36,6 +36,7 @@ ol {
         background: $colour-primary;
         color: #fff;
         margin-left: -2rem;
+        text-align: center;
     }
 }
 
@@ -62,6 +63,10 @@ ol {
     width: 100%;
     margin-bottom: 1rem;
     background-color: #fff;
+    &:hover{
+        @include box-shadow;
+        transform: scale (1.13);
+    }
 
     a {
         text-decoration: none;
@@ -120,37 +125,50 @@ ol {
 }
 
 .card__item {
-    
+    white-space: nowrap;
     text-overflow: ellipsis;
+    
+    
     font-weight: 300;
+    
+    
+    
 }
 
 .card__price {
     display: flex;
     justify-content: flex-end;
     align-self: flex-end;
-    padding: 0 1rem 1rem 0;
+    padding: 0 1rem 0 0;
+    
 }
 
 /*---------------------------------Check animation------------------------------*/
 .menu__card {
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    
+
+    height: 5rem;
     overflow: hidden;
     cursor: pointer;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
     background-color: #fff;
     border-radius: 1rem;
     margin: 1rem 0;
-    padding: 0 0 0 0.5rem;
-    line-height: 0.5rem;
+    
+    padding: 0 0 1rem 0.5rem;
+    
     @include box-shadow;
 
     .menu__card-header {
-        flex-grow: 10;
+        flex-grow: 5;
+        padding-bottom: 1rem;
+        overflow: hidden;
+    
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
     }
 
 
@@ -161,13 +179,15 @@ ol {
         justify-content: center;
         align-items: center;
         width: 0;
+        
+        height: 6rem;
         border-radius: 0 1rem 1rem 0;
         font-size: 1.8rem;
-        transition: width 1s;
+        transition: width .5s;
 
         background-color: $colour-tertiary;
         color: #fff;
-
+        
     }
 
 
@@ -179,7 +199,7 @@ ol {
 
     .fa-check-circle {
         transition-delay: .5s;
-        transition: transform 1s ease-in-out;
+        transition: transform .5s ease-in-out;
     }
 
     &:hover .fa-check-circle {

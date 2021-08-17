@@ -103,6 +103,89 @@ body {
   opacity: 1;
 }
 
+.spinner-wrapper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(241, 241, 241, 0.8);
+  animation: loader 1s ease-in-out 1.5s forwards;
+  z-index: -1;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  align-self: center;
+}
+
+.spinner div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spinnerOne 1.2s linear infinite;
+}
+
+.spinner div:nth-child(2) {
+  border: 8px solid transparent;
+  border-bottom-color: #FF79DA;
+  animation: spinnerTwo 1.2s linear infinite;
+}
+
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+    border-width: 20px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 20px;
+  }
+}
+@keyframes spinnerTwo {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 20px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1);
+  }
+}
 /*-------------------------------EXPLAINER------------------------------*/
 .explainer__step {
   background-color: #f1f1f1;
@@ -137,6 +220,7 @@ ol {
   background: #9356DC;
   color: #fff;
   margin-left: -2rem;
+  text-align: center;
 }
 
 .explainer__steps .fas {
@@ -159,6 +243,10 @@ ol {
   width: 100%;
   margin-bottom: 1rem;
   background-color: #fff;
+}
+.restaurants__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0.3rem 0.3rem 5px;
+  transform: scale 1.13;
 }
 .restaurants__card a {
   text-decoration: none;
@@ -210,6 +298,7 @@ ol {
 }
 
 .card__item {
+  white-space: nowrap;
   text-overflow: ellipsis;
   font-weight: 300;
 }
@@ -218,37 +307,39 @@ ol {
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
-  padding: 0 1rem 1rem 0;
+  padding: 0 1rem 0 0;
 }
 
 /*---------------------------------Check animation------------------------------*/
 .menu__card {
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  height: 5rem;
   overflow: hidden;
   cursor: pointer;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: stretch;
   background-color: #fff;
   border-radius: 1rem;
   margin: 1rem 0;
-  padding: 0 0 0 0.5rem;
-  line-height: 0.5rem;
+  padding: 0 0 1rem 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0.3rem 0.3rem 5px;
 }
 .menu__card .menu__card-header {
-  flex-grow: 10;
+  flex-grow: 5;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__card .card__check {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 0;
+  height: 6rem;
   border-radius: 0 1rem 1rem 0;
   font-size: 1.8rem;
-  transition: width 1s;
+  transition: width 0.5s;
   background-color: #99E2D0;
   color: #fff;
 }
@@ -258,64 +349,12 @@ ol {
 }
 .menu__card .fa-check-circle {
   transition-delay: 0.5s;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .menu__card:hover .fa-check-circle {
   transform: rotate(1turn);
 }
 
-.spinner {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  align-self: center;
-}
-
-.spinner div {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  box-sizing: border-box;
-  border: 8px solid transparent;
-  border-top-color: #9356DC;
-  border-radius: 50%;
-  animation: spinnerOne 1.2s linear infinite;
-}
-
-.spinner div:nth-child(2) {
-  border: 8px solid transparent;
-  border-bottom-color: #FF79DA;
-  animation: spinnerTwo 1.2s linear infinite;
-}
-
-@keyframes spinnerOne {
-  0% {
-    transform: rotate(0deg);
-    border-width: 10px;
-  }
-  50% {
-    transform: rotate(180deg);
-    border-width: 1px;
-  }
-  100% {
-    transform: rotate(360deg);
-    border-width: 10px;
-  }
-}
-@keyframes spinnerTwo {
-  0% {
-    transform: rotate(0deg);
-    border-width: 1px;
-  }
-  50% {
-    transform: rotate(180deg);
-    border-width: 10px;
-  }
-  100% {
-    transform: rotate(360deg);
-    border-width: 1px;
-  }
-}
 .footer__all-pages {
   background-color: #353535;
   text-decoration: none;

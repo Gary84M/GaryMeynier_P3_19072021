@@ -1,9 +1,31 @@
+.spinner-wrapper{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(241, 241, 241, 0.8);
+    
+    
+    animation: loader 1s ease-in-out 1.5s forwards;
+    z-index: -1;
+    
+}
+
 .spinner{
     width: 100px;
     height: 100px;
     position: relative;
     align-self: center;
+
+    
+   
+    
+    
   }
+  
   
   .spinner div{
     height: 100%;
@@ -15,6 +37,7 @@
     border-radius: 50%;
     animation: spinnerOne 1.2s linear infinite;
     
+    
   }
   .spinner div:nth-child(2){
     border: 8px solid transparent; 
@@ -22,12 +45,18 @@
     animation: spinnerTwo 1.2s linear infinite;
   }
   @keyframes spinnerOne {
-      0%{transform: rotate(0deg); border-width: 10px;}
+      0%{transform: rotate(0deg); border-width: 20px;}
       50%{transform: rotate(180deg); border-width: 1px;}
-      100%{transform: rotate(360deg); border-width: 10px;}
+      100%{transform: rotate(360deg); border-width: 20px;}
   }
   @keyframes spinnerTwo {
     0%{transform: rotate(0deg); border-width: 1px;}
-    50%{transform: rotate(180deg); border-width: 10px;}
+    50%{transform: rotate(180deg); border-width: 20px;}
     100%{transform: rotate(360deg); border-width: 1px;}
 }
+@keyframes loader {
+    0% {opacity: 1; transform: translateZ(0);} 
+    50% {opacity: 1; transform: translateZ(0);} 
+    90% {opacity: 1; transform: translateZ(0);}
+    100% {opacity: 0; transform: translateZ(-1);}
+  }
