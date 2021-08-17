@@ -127,6 +127,7 @@ ol {
 .card__item {
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
     
     
     font-weight: 300;
