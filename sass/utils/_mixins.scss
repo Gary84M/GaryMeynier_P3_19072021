@@ -31,3 +31,58 @@
 @mixin linear-lighten{
     background: linear-gradient(120deg, lighten($colour-primary, 5%), lighten($colour-secondary, 5%));
 }
+@mixin mobile{
+    @media screen and (max-width: map-get($breakpoints, small )){
+
+    }
+}
+
+@mixin tabletCards{
+    @media screen and (min-width: map-get($breakpoints, small)){
+        max-width: 40%;
+        margin: 1rem 1rem 1rem 1rem;
+        flex-direction: row;
+              
+    }
+}
+
+@mixin tabletContainer{
+    @media screen and (min-width: map-get($breakpoints, small)){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+              
+    }
+}
+
+@mixin bulletLargeBreakpoint{
+    @media screen and (min-width: map-get($breakpoints, large)){
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    }
+}
+@mixin bulletSmallBreakpoint{
+    @media screen and (max-width: map-get($breakpoints, small)){
+        font-size: .9rem;
+        line-height: .8rem;
+        }
+}
+@mixin menuLargeBreakpoint{
+    @media screen and (min-width: map-get($breakpoints, v-large)){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
+@mixin menuCardsLargeBreakpoint{
+    @media screen and (min-width: map-get($breakpoints, v-large)){
+        max-width: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+        
+    }
+}

@@ -7,3 +7,11 @@ $colour-dual-end: linear-gradient(120deg, $colour-primary, $colour-secondary);
 $colour-footer: #353535;
 $colour-shadow: rgba(0 0 0 / 0.3);
 $shadow-size: 0.3rem 0.3rem 5px;
+
+// Map des breakpoints
+$breakpoints: (
+  small: 576px,
+  medium: 768px,
+  large: 921px,
+  v-large: 1023px,
+);

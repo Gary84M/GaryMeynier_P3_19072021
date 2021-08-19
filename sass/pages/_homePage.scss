@@ -19,6 +19,16 @@
     
     
 }
+.container{
+    @include tabletContainer;
+    align-self: center;
+    padding: 1rem;
+    
+}
+.section__title{
+
+    padding-left: 1rem;
+}
 .restaurants{
     display: flex;
     flex-direction: column;

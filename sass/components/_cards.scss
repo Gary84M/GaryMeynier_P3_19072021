@@ -17,11 +17,23 @@
 /*---------------------------------Bullets------------------------------*/
 ol {
     padding-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include bulletLargeBreakpoint;
+    
+    
+    
 }
 
 .explainer__steps li {
     counter-increment: li;
     list-style: none;
+    @include bulletSmallBreakpoint;
+    
+    
+    
 
     &::before {
         display: inline-block;
@@ -49,7 +61,7 @@ ol {
 .menu__header {
     display: flex;
     justify-content: space-between;
-    padding-right: 2rem;
+    padding-right: 1rem;
 
 }
 
@@ -59,10 +71,13 @@ ol {
 }
 
 .restaurants__card {
+    
+    min-width: 15rem;
     border-radius: 1rem;
     width: 100%;
     margin-bottom: 1rem;
     background-color: #fff;
+    @include tabletCards;
     &:hover{
         @include box-shadow;
         transform: scale (1.13);
