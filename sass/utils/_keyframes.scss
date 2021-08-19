@@ -12,7 +12,7 @@
   0% {opacity: 1; transform: translateX(1);} 
   50% {opacity: 1; transform: translateX(1);} 
   90% {opacity: 1; transform: translateX(1);}
-  100% {opacity: 0; transform: translateX(-1); transform: translateZ(-2);}
+  100% {opacity: 0; transform: translateX(9999); tranform: translateZ(-9999);}
 }
 
 /*@keyframes progress-bar{

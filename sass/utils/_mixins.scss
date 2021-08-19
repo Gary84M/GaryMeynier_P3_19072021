@@ -50,7 +50,8 @@
     @media screen and (min-width: map-get($breakpoints, small)){
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        margin: 2rem;
         
               
     }
@@ -59,7 +60,7 @@
 @mixin bulletLargeBreakpoint{
     @media screen and (min-width: map-get($breakpoints, large)){
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     }
 }
@@ -72,7 +73,7 @@
 @mixin menuLargeBreakpoint{
     @media screen and (min-width: map-get($breakpoints, v-large)){
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     }
 }
