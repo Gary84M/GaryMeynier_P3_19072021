@@ -120,6 +120,10 @@ body {
   background: linear-gradient(120deg, #a16be0, #ff93e1);
 }
 
+.heart {
+  margin-right: 3rem;
+}
+
 .card__btn {
   margin-top: 1rem;
   position: relative;
@@ -507,10 +511,6 @@ body {
   .menu__container {
     padding-right: 0;
   }
-}
-
-.heart {
-  margin-right: 1rem;
 }
 
 @media screen and (min-width: 1023px) {
