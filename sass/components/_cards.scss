@@ -31,10 +31,6 @@ ol {
     counter-increment: li;
     list-style: none;
     @include bulletSmallBreakpoint;
-    
-    
-    
-
     &::before {
         display: inline-block;
         content: counter(li);
