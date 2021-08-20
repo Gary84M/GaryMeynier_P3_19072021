@@ -52,7 +52,7 @@
 /**---ANIMATION DELAY---**/
 
 .menu__card{
-    animation: move-up .5s linear 1s forwards;
+    animation: move-up .5s linear forwards;
 }
 .delay--1{
     opacity: 0;

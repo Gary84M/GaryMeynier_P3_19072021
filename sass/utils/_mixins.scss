@@ -9,23 +9,18 @@
     box-shadow: $colour-shadow $size ;
 }
 @mixin btn {
+    display: block;
+    color: #fff;
     border: 0;
     padding: 1rem;
     font-weight: 500;
     font-size: 1.1rem;
     border-radius: 5rem;
-    color: #fff;
     transition: scale 50ms;
     transform: scale(1);
     cursor: pointer;
     background-image: $colour-dual-start;
     @include box-shadow;
-
-
-    a{
-        text-decoration: none;
-        color: #fff;
-    }
 }
     
 @mixin linear-lighten{
