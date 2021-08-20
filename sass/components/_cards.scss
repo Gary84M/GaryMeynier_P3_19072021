@@ -79,7 +79,6 @@ ol {
     @include tabletCards;
     &:hover{
         @include box-shadow;
-        transform: scale (1.13);
     }
 
     a {
