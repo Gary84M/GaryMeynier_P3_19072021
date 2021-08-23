@@ -33,20 +33,20 @@
 }
 
 @mixin tabletCards{
-    @media screen and (min-width: map-get($breakpoints, small)){
-        max-width: 40%;
-        margin: 1rem 1rem 1rem 1rem;
+    @media screen and (min-width: map-get($breakpoints, medium)){
+        width: 45%;
+        margin: 1rem;
         flex-direction: row;
               
     }
 }
 
 @mixin tabletContainer{
-    @media screen and (min-width: map-get($breakpoints, small)){
+    @media screen and (min-width: map-get($breakpoints, medium)){
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin: 2rem;
+        
         
               
     }

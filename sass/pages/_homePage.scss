@@ -10,7 +10,19 @@
     width: 100%;
     padding: 1rem  0 1rem 0;
     margin-bottom: 0;
+    align-items: center;
+    
+    input{
+        width: 8rem;
+        background-color: transparent;
+        border: none;
+        font-size: 1.1rem;
+    }
+    input::placeholder{
+        color: rgba(32, 32, 32, 0.95);
+    }
 }
+
 .hero{
     text-align: center;
     justify-content: center;
@@ -22,7 +34,7 @@
 .container{
     @include tabletContainer;
     align-self: center;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     
 }
 .section__title{

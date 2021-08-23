@@ -112,6 +112,7 @@ body {
 
 .heart {
   margin-right: 3rem;
+  padding-top: 0.8rem;
 }
 
 .card__btn {
@@ -198,6 +199,9 @@ body {
 .explainer__step:hover {
   background-color: #f2eafb;
 }
+.explainer__step:hover i {
+  color: #9356DC;
+}
 
 /*---------------------------------Bullets------------------------------*/
 ol {
@@ -228,7 +232,6 @@ ol {
 .explainer__steps li::before {
   display: inline-block;
   content: counter(li);
-  /*padding: .5rem .7rem .5rem .7rem;*/
   line-height: 1rem;
   padding: 0.6rem;
   width: 1rem;
@@ -260,16 +263,15 @@ ol {
 }
 
 .restaurants__card {
-  min-width: 15rem;
   border-radius: 1rem;
   width: 100%;
   margin-bottom: 1rem;
   background-color: #fff;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .restaurants__card {
-    max-width: 40%;
-    margin: 1rem 1rem 1rem 1rem;
+    width: 45%;
+    margin: 1rem;
     flex-direction: row;
   }
 }
@@ -283,13 +285,22 @@ ol {
 
 .card__img {
   width: 100%;
+  height: 15rem;
   position: relative;
 }
 .card__img img {
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 1rem 1rem 0 0;
+}
+
+.card__content h3 {
+  margin-bottom: 0.5rem;
+}
+.card__content span {
+  font-size: 1.17rem;
+  font-weight: 300;
 }
 
 .card__footer {
@@ -336,12 +347,18 @@ ol {
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
-  padding: 0 1rem 0 0;
+  padding: 0 1rem 1rem 0;
+}
+
+.menu__card-header {
+  padding: 0.5rem 0 0 0;
+}
+.menu__card-header p {
+  margin: 0.5rem 0 0 0;
 }
 
 /*---------------------------------Check animation------------------------------*/
 .menu__card {
-  height: 5rem;
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -350,7 +367,7 @@ ol {
   background-color: #fff;
   border-radius: 1rem;
   margin: 1rem 0;
-  padding: 0 0 1rem 0.5rem;
+  padding: 0 0 0 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0.3rem 0.3rem 5px;
 }
 .menu__card .menu__card-header {
@@ -365,7 +382,6 @@ ol {
   justify-content: center;
   align-items: center;
   width: 0;
-  height: 6rem;
   border-radius: 0 1rem 1rem 0;
   font-size: 1.8rem;
   transition: width 0.5s;
@@ -432,6 +448,16 @@ body {
   width: 100%;
   padding: 1rem 0 1rem 0;
   margin-bottom: 0;
+  align-items: center;
+}
+.location input {
+  width: 8rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+}
+.location input::placeholder {
+  color: rgba(32, 32, 32, 0.95);
 }
 
 .hero {
@@ -443,14 +469,13 @@ body {
 
 .container {
   align-self: center;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 2rem;
   }
 }
 
@@ -487,6 +512,10 @@ body {
 
 .container__page {
   padding: 1rem;
+}
+
+.menu__title {
+  font-size: 1.6rem;
 }
 
 .menu__container {
@@ -534,6 +563,7 @@ body {
 
 .delay--1 {
   opacity: 0;
+  animation-delay: 0.1s;
 }
 
 .delay--2 {

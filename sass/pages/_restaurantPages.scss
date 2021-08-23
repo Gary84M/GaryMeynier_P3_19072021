@@ -20,6 +20,9 @@
 .container__page{
     padding: 1rem;
 }
+.menu__title{
+    font-size: 1.6rem;
+}
 .menu__container{
     background-color: $colour-background;
     border-radius: 2rem 2rem 0 0;
@@ -53,6 +56,7 @@
 }
 .delay--1{
     opacity: 0;
+    animation-delay: .1s;
     
 }
 .delay--2{
